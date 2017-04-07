@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 @Injectable()
 export class DataService {
@@ -12,6 +12,13 @@ export class DataService {
   getAdventurers() {
     return this.adventurers;
   }
+
+  getAdventurerByKey(key: any) {
+    let result = this.angularFire.database.object('/adventurers/' + key);
+    return result;
+  }
+
+
 
 
 }
