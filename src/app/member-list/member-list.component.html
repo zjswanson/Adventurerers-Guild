@@ -1,10 +1,17 @@
 <div class="title-bar">
   <h2>Adventurer's Guild Members</h2>
+  <p>sort by: </p>
+  <select class="inline" (change)="sortList($event.target.value)">
+    <option value='all'> All Adventurers </option>
+    <option value='wizard'> Wizards </option>
+    <option value="warrior"> Warriors </option>
+    <option value="rogue"> Rogues </option>
+  </select>
 </div>
 
-<div class="col-sm-4" *ngFor="let hero of adventurers | async">
+<div class="col-sm-4" *ngFor="let hero of adventurers | async | specialty:sortBy">
   <div class="panel panel-default list-panel">
-    <div class="panel-heading">
+    <div class="panel-heading" (click)="navigate(hero)">
       <h3>{{hero.name}}</h3>
       <h4>{{hero.title}}</h4>
     </div>

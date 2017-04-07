@@ -11,6 +11,8 @@ import { MemberListComponent } from './member-list/member-list.component';
 import { InnkeeperComponent } from './innkeeper/innkeeper.component';
 import { AboutComponent } from './about/about.component';
 import { DetailComponent } from './detail/detail.component';
+import { DragonSlayerPipe } from './dragon-slayer.pipe';
+import { SpecialtyPipe } from './specialty.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +27,9 @@ export const firebaseConfig = {
     MemberListComponent,
     InnkeeperComponent,
     AboutComponent,
-    DetailComponent
+    DetailComponent,
+    DragonSlayerPipe,
+    SpecialtyPipe
   ],
   imports: [
     BrowserModule,
