@@ -4,10 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { MemberListComponent } from './member-list/member-list.component';
 import { InnkeeperComponent } from './innkeeper/innkeeper.component';
+import { AboutComponent } from './about/about.component';
+import { DetailComponent } from './detail/detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -20,13 +23,16 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     MemberListComponent,
-    InnkeeperComponent
+    InnkeeperComponent,
+    AboutComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
