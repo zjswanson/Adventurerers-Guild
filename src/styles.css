@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+.list-panel {
+  height: 400px;
+  overflow: hidden;
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
+
+
+.list-image {
+  margin: 0;
+  padding: 0;
+  height: 250px;
+}

@@ -2,9 +2,14 @@
   <h2>Adventurer's Guild Members</h2>
 </div>
 
-<div class="list" *ngFor="let hero of adventurers | async">
-  <p>
-    looping!
-    {{hero.name}}
-  </p>
+<div class="col-sm-4" *ngFor="let hero of adventurers | async">
+  <div class="panel panel-default list-panel">
+    <div class="panel-heading">
+      <h3>{{hero.name}}</h3>
+      <h4>{{hero.title}}</h4>
+    </div>
+    <div class="panel-body hide-overflow">
+      <img src={{hero.imageUrl}} alt="image of hero.name" class="list-image"/>
+    </div>
+  </div>
 </div>
