@@ -6,7 +6,7 @@
       "imageUrl": "https://s-media-cache-ak0.pinimg.com/736x/08/69/71/086971ec519d01df20ae9cb4bf5e411d.jpg",
       "specialty": "warrior",
       "goblinsSlain": 56,
-      "dragonsSlains": 0
+      "dragonsSlain": 0
     },
     {
       "name": "Schmendrick",
@@ -14,7 +14,7 @@
       "imageUrl": "http://orig03.deviantart.net/7024/f/2016/086/8/b/wizard_overlord_by_88grzes-d9woys6.jpg",
       "specialty": "wizard",
       "goblinsSlain": 20,
-      "dragonsSlains": 1
+      "dragonsSlain": 1
     },
     {
       "name": "Kvothe",
@@ -22,7 +22,7 @@
       "imageUrl": "http://paizo.com/image/content/Blog/TheMasked.jpg",
       "specialty": "rogue",
       "goblinsSlain": 123,
-      "dragonsSlains": 0
+      "dragonsSlain": 0
     }
   ]
 }

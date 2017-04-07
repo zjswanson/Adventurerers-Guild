@@ -13,8 +13,7 @@ import { Location } from '@angular/common';
 })
 export class DetailComponent implements OnInit {
   adventurerKey: any;
-  adventurer: FirebaseObjectObservable<any>;
-  object: any;
+  adventurer: Adventurer;
 
   constructor(private firebase: DataService, private route: ActivatedRoute, private location: Location) { }
 
@@ -22,6 +21,8 @@ export class DetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.adventurerKey = urlParameters['key'];
     });
-    this.adventurer = this.firebase.getAdventurerByKey(this.adventurerKey);
+     this.firebase.getAdventurerByKey(this.adventurerKey).subscribe( data=> {
+      this.adventurer = data;
+    });
   }
 }

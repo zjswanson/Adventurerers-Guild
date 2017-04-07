@@ -1,10 +1,18 @@
 <div class="title-bar">
   <h2>Adventurer Detail:</h2>
 </div>
-<div class="">
-  <p>
-    working
-  </p>
-  <h2>{{ (adventurer | async)?.name }}</h2>
-  <h2>{{ (adventurer | async)?.title }}</h2>
+<div class="row">
+  <div class="col-sm-8">
+    <h2>Name: {{ adventurer?.name}}</h2>
+    <h3>Title: {{ adventurer?.title }}</h3>
+    <h3>Specialty: {{adventurer?.specialty}}</h3>
+    <p> Goblins Slain: {{adventurer?.goblinsSlain}}</p>
+    <p> Dragons Slain: {{adventurer?.dragonsSlain}}</p>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel-img">
+      <!--So I tried to do this with an async pipe instead of subscribing, but it woulnd't let me use the elvis operator inside of the src attribute below  -->
+      <img src={{adventurer?.imageUrl}} alt="image of hero.name" class="list-image"/>
+    </div>
+  </div>
 </div>

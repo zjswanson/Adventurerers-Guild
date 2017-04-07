@@ -10,8 +10,24 @@
 }
 
 
-.list-image {
+.list-img {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel-img {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  height: 110%;
 }

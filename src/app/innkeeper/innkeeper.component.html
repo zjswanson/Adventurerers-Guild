@@ -1,3 +1,45 @@
-<p>
-  Hey Zach!  When you build out this component, use the same form for add and edit.  You can have the "choose Add" button instantiate a new object, put it in the to edit property, and change the button to call a save method instead of an update method.
-</p>
+<div class="title-bar">
+  <h2>Adventurer's Guild Members</h2>
+  <p>sort by: </p>
+  <select class="inline" (change)="sortList($event.target.value)">
+    <option value='all'> All Adventurers </option>
+    <option value='wizard'> Wizards </option>
+    <option value="warrior"> Warriors </option>
+    <option value="rogue"> Rogues </option>
+  </select>
+  <button class="btn" (click)="selectAdd()">Add New Guild Member</button>
+</div>
+
+<div class="row">
+  <div class="col-sm-4" >
+    <h3>Adventurer List</h3>
+    <div *ngFor="let hero of adventurers | async | specialty:sortBy">
+      <h4 (click)=selectEdit(hero)>{{hero.name}}: {{hero.title}}</h4>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <h3 *ngIf="isAdding">Add Adventurer:</h3>
+    <h3 *ngIf="isEditing">Edit Adventurer:</h3>
+
+    <label>Name:</label>
+    <input [(ngModel)]="currentAdventurer.name" class="form-control">
+    <label>Title:</label>
+    <input [(ngModel)]="currentAdventurer.title" class="form-control">
+    <label>Specialty:</label>
+    <select class="form-control" [(ngModel)]="currentAdventurer.specialty">
+      <option value='wizard'> Wizard </option>
+      <option value="warrior"> Warrior </option>
+      <option value="rogue"> Rogue </option>
+    </select>
+    <label>Image URL:</label>
+    <input [(ngModel)]="currentAdventurer.imageUrl" class="form-control">
+    <label>Goblins Slain:</label>
+    <input [(ngModel)]="currentAdventurer.goblinsSlain" class="form-control">
+    <label>Dragons Slain:</label>
+    <input [(ngModel)]="currentAdventurer.dragonsSlain" class="form-control">
+
+    <button *ngIf="isAdding" type="button" (click)="addAdventurer()">Add Adventurer</button>
+    <button *ngIf="isEditing" type="button" (click)="saveEdit()">Save Edits</button>
+    <button *ngIf="isEditing" type="button" (click)="delete()">Delete Adventurer</button>
+  </div>
+</div>
