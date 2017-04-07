@@ -1,0 +1,10 @@
+<div class="title-bar">
+  <h2>Adventurer's Guild Members</h2>
+</div>
+
+<div class="list" *ngFor="let hero of adventurers | async">
+  <p>
+    looping!
+    {{hero.name}}
+  </p>
+</div>
