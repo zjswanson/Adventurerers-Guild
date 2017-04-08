@@ -13,6 +13,7 @@
 <div class="row">
   <div class="col-sm-4" >
     <h3>Adventurer List</h3>
+    <p>click to edit</p>
     <div *ngFor="let hero of adventurers | async | specialty:sortBy">
       <h4 (click)=selectEdit(hero)>{{hero.name}}: {{hero.title}}</h4>
     </div>

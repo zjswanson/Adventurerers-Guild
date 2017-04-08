@@ -16,7 +16,7 @@ Licensed under MIT license
 
 ## Installation
 
-Adventurer's Inn is generously hosted by the fine folks at Firebase.  You can vist at:
+Adventurer's Inn is generously hosted by the fine folks at Firebase.  You can visit at: https://adventurers-guild-cf461.firebaseapp.com
 
 To install an instance locally, first clone the repository from git and run the following commands from the project root in the terminal:
 
