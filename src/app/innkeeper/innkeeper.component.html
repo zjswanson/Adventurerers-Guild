@@ -1,13 +1,13 @@
 <div class="title-bar">
   <h2>Adventurer's Guild Members</h2>
-  <p>sort by: </p>
+  <p class="inline">sort by: </p>
   <select class="inline" (change)="sortList($event.target.value)">
     <option value='all'> All Adventurers </option>
     <option value='wizard'> Wizards </option>
     <option value="warrior"> Warriors </option>
     <option value="rogue"> Rogues </option>
   </select>
-  <button class="btn" (click)="selectAdd()">Add New Guild Member</button>
+  <button class="btn btn-sm inline" (click)="selectAdd()">Add New Guild Member</button>
 </div>
 
 <div class="row">
@@ -38,8 +38,8 @@
     <label>Dragons Slain:</label>
     <input [(ngModel)]="currentAdventurer.dragonsSlain" class="form-control">
 
-    <button *ngIf="isAdding" type="button" (click)="addAdventurer()">Add Adventurer</button>
-    <button *ngIf="isEditing" type="button" (click)="saveEdit()">Save Edits</button>
-    <button *ngIf="isEditing" type="button" (click)="delete()">Delete Adventurer</button>
+    <button *ngIf="isAdding" class="btn" (click)="addAdventurer()">Add Adventurer</button>
+    <button *ngIf="isEditing" class="btn"  (click)="saveEdit()">Save Edits</button>
+    <button *ngIf="isEditing" class="btn"  (click)="delete()">Delete Adventurer</button>
   </div>
 </div>

@@ -49,7 +49,8 @@ export class InnkeeperComponent implements OnInit {
   }
   // save changes to adventurer
   saveEdit() {
-
+    this.firebase.updateAdventurer(this.currentAdventurer);
+    this.selectAdd();
   }
 
   delete() {

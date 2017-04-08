@@ -1,11 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global and template styling */
 
-.list-panel {
-  height: 400px;
+.jumbotron {
+  text-shadow: 2px white;
+  background-image: url('http://fantasy-faction.com/wp-content/uploads/2014/09/2014-SEP-Guild-TDM-by-danesh.jpg');
+}
+
+body {
+  background-image: url('assets/ep_naturalwhite.png');
+}
+
+.title-bar {
+  margin-bottom: 20px;
+}
+
+/* Utility Classes */
+.hide-overflow {
   overflow: hidden;
 }
 
-.hide-overflow {
+.sheer {
+  background-color: rgba(255,255,255, .35);
+  border-radius: 5px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.inline {
+  display: inline;
+}
+
+/* Panel and Image Styling */
+
+.list-panel {
+  height: 400px;
   overflow: hidden;
 }
 
